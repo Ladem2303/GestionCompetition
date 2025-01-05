@@ -12,15 +12,37 @@
 <body>
     <!-- En-tête du site -->
     <header>
-        <div class="container">
-            <h1>Gestion des Compétitions</h1>
+        <div class="header-container">
+            <!-- Logo du site -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Logo Gestion des Compétitions" />
+                </a>
+            </div>
+
+            <!-- Barre de navigation -->
             <nav>
-                <ul>
+                <ul class="nav-list">
                     <li><a href="#fonctionnalites">Fonctionnalités</a></li>
                     <li><a href="#statistiques">Statistiques</a></li>
+                    <li class="dropdown">
+                        <a href="#">Équipes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#team-alpha">Team Alpha</a></li>
+                            <li><a href="#team-beta">Team Beta</a></li>
+                            <li><a href="#team-gamma">Team Gamma</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- Bouton pour les mobiles -->
+            <div class="mobile-menu">
+                <button id="menu-toggle" aria-label="Menu">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -75,8 +97,8 @@
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
-                <p>Pour toute question/demande d'ajout et de participation, contactez-nous sur le discord suivant :</p>
-                <a Orioneda </a>
+                <p>Pour toute question, contactez-nous à l'adresse suivante :</p>
+                <a href="mailto:contact@competitionmanager.com">contact@competitionmanager.com</a>
             </div>
         </section>
     </main>
@@ -84,8 +106,11 @@
     <!-- Pied de page -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 - Orioneda. Tous droits réservés.</p>
+            <p>&copy; 2025 - Gestion des Compétitions. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <!-- Lien vers le fichier JS -->
+    <script src="assets/script.js" defer></script>
 </body>
 </html>
