@@ -3,44 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équipes - Gestion des Compétitions</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Équipes et Joueurs</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que le CSS est lié -->
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
+    <!-- En-tête -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="Logo Gestion des Compétitions" />
-                </a>
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="statistiques.html">Calendrier</a></li>
-                    <li><a href="equipes.html">Équipes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="equipes.html" class="active">Équipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </header>
+
+    <!-- Contenu Principal -->
     <main>
-        <section id="equipes">
-            <h2>Équipes</h2>
-            <p>Voici les équipes actuelles en compétition :</p>
-            <ul>
-                <li>Team Alpha</li>
-                <li>Team Beta</li>
-                <li>Team Gamma</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 - Gestion des Compétitions. Tous droits réservés.</p>
+        <h1>Équipes et Joueurs</h1>
+        <div class="teams-container">
+            <!-- Exemple d'Équipe 1 -->
+            <div class="team">
+                <h2>Équipe Alpha</h2>
+                <p><strong>Capitaine:</strong> Jean Dupont</p>
+                <p><strong>Classement:</strong> 5ème</p>
+                <h3>Joueurs:</h3>
+                <ul class="players-list">
+                    <li>Alexis Lefevre</li>
+                    <li>Marc Durand</li>
+                    <li>Sophie Bernard</li>
+                    <li>François Gauthier</li>
+                </ul>
+                <button class="view-team-btn">Voir les Détails</button>
+            </div>
+
+            <!-- Exemple d'Équipe 2 -->
+            <div class="team">
+                <h2>Équipe Beta</h2>
+                <p><strong>Capitaine:</strong> Marie Durand</p>
+                <p><strong>Classement:</strong> 2ème</p>
+                <h3>Joueurs:</h3>
+                <ul class="players-list">
+                    <li>Pauline Simon</li>
+                    <li>Louis Martin</li>
+                    <li>Lucie Robert</li>
+                    <li>Benjamin Leclerc</li>
+                </ul>
+                <button class="view-team-btn">Voir les Détails</button>
+            </div>
+
+            <!-- Exemple d'Équipe 3 -->
+            <div class="team">
+                <h2>Équipe Gamma</h2>
+                <p><strong>Capitaine:</strong> Lucas Lefevre</p>
+                <p><strong>Classement:</strong> 3ème</p>
+                <h3>Joueurs:</h3>
+                <ul class="players-list">
+                    <li>Caroline Dubois</li>
+                    <li>Thibault Leroy</li>
+                    <li>Alicia Chavarria</li>
+                    <li>Victor Dupuis</li>
+                </ul>
+                <button class="view-team-btn">Voir les Détails</button>
+            </div>
         </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Gestion des compétitions - Tous droits réservés.</p>
     </footer>
-    <script src="assets/script.js" defer></script>
+
+    <script src="script.js"></script> <!-- Lier le fichier JavaScript -->
 </body>
 </html>
