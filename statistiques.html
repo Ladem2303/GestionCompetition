@@ -3,63 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistiques - Gestion des Compétitions</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Calendrier des Compétitions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- En-tête de la page -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="Logo Gestion des Compétitions" />
-                </a>
-            </div>
+        <div class="navbar">
+            <a href="index.html" class="logo">Gestion Compétition</a>
             <nav>
-                <ul class="nav-list">
+                <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="statistiques.html">Calendrier</a></li>
-                    <li><a href="equipes.html">Équipes</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="statistiques.html">Statistiques</a></li>
+                    <li><a href="calendrier.html" class="active">Calendrier</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Titre de la page Calendrier -->
     <main>
-        <section id="statistiques">
-            <h2>Statistiques</h2>
-            <p>Consultez les performances des équipes et des joueurs en temps réel.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Joueur</th>
-                        <th>Équipe</th>
-                        <th>Victoires</th>
-                        <th>Défaites</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Player1</td>
-                        <td>Team Alpha</td>
-                        <td>12</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Player2</td>
-                        <td>Team Beta</td>
-                        <td>8</td>
-                        <td>7</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="calendar-container">
+            <h1>Calendrier des Compétitions</h1>
+            <div class="calendar-navigation">
+                <button id="prev-month">Mois Précédent</button>
+                <h2 id="current-month">Janvier 2025</h2>
+                <button id="next-month">Mois Suivant</button>
+            </div>
+            <div class="calendar">
+                <table id="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mer</th>
+                            <th>Jeu</th>
+                            <th>Ven</th>
+                            <th>Sam</th>
+                            <th>Dim</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Le calendrier sera généré dynamiquement en JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
+
+    <!-- Section d'événements -->
+    <section class="events">
+        <h2>Événements à venir</h2>
+        <ul id="event-list">
+            <li class="event-item">
+                <strong>12 Jan 2025:</strong> Tournoi de Qualification - Équipe A vs Équipe B
+            </li>
+            <li class="event-item">
+                <strong>19 Jan 2025:</strong> Match Amical - Équipe C vs Équipe D
+            </li>
+            <li class="event-item">
+                <strong>25 Jan 2025:</strong> Finales du Tournoi - Match Décisif
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 - Gestion des Compétitions. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2025 Gestion Compétition. Tous droits réservés.</p>
     </footer>
-    <script src="assets/script.js" defer></script>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="calendrier.js"></script>
 </body>
 </html>
