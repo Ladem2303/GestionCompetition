@@ -1,8 +1,13 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f9f9f9;
     color: #333;
 }
@@ -13,55 +18,103 @@ body {
     margin: 0 auto;
 }
 
+/* En-tête */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
-    text-align: center;
-    margin: 0;
-}
-
-nav ul {
+.header-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-list {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 0 15px;
+.nav-list li {
+    position: relative;
 }
 
-nav ul li a {
-    color: #fff;
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #f4c10f;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
     text-decoration: none;
 }
 
-main section {
-    padding: 20px 0;
+.dropdown-menu a:hover {
+    background-color: #555;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+/* Mobile */
+.mobile-menu {
+    display: none;
 }
 
-table, th, td {
-    border: 1px solid #ccc;
+.mobile-menu button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
 }
 
-th, td {
-    padding: 10px;
-    text-align: center;
-}
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+    }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
+    .nav-list.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
 }
