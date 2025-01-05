@@ -1,4 +1,4 @@
-// Exemple d'interaction JavaScript
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Bienvenue sur le gestionnaire de compétitions !");
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('show');
 });
