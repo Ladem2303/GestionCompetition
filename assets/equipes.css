@@ -1,0 +1,152 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header .navbar {
+    text-align: center;
+}
+
+header .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .navbar ul li a:hover,
+header .navbar ul li a.active {
+    text-decoration: underline;
+}
+
+/* Contenu principal */
+main {
+    padding: 30px 10%;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 48%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.team:hover {
+    transform: translateY(-10px);
+}
+
+.team h2 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.team p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.team h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #555;
+}
+
+.players-list {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.players-list li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.view-team-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.view-team-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .teams-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .team h2 {
+        font-size: 24px;
+    }
+
+    .team h3 {
+        font-size: 20px;
+    }
+
+    .players-list li {
+        font-size: 14px;
+    }
+
+    .view-team-btn {
+        font-size: 14px;
+    }
+}
