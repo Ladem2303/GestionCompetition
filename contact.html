@@ -1,42 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Gestion des Compétitions</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Page de Contact - Gestion de Compétitions</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Fichier CSS principal -->
+    <link rel="stylesheet" href="css/contact.css"> <!-- Fichier CSS spécifique à la page de contact -->
 </head>
+
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="Logo Gestion des Compétitions" />
-                </a>
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="statistiques.html">Statistiques</a></li>
-                    <li><a href="equipes.html">Équipes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="stats.html">Statistiques</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Pour toute question, contactez-nous à l'adresse suivante :</p>
-            <a href="mailto:contact@competitionmanager.com">contact@competitionmanager.com</a>
+        <section class="contact-container">
+            <div class="contact-info">
+                <h2>Page de Contact</h2>
+                <p>Nous avons créé cet espace pour vous offrir un moyen simple et rapide de nous contacter pour toute question, demande ou suggestion. Cette page est spécifiquement dédiée à la gestion des équipes et des joueurs dans le cadre de nos pratiques compétitives de Rainbow Six Siege. Si vous souhaitez ajouter une nouvelle équipe, intégrer un ou plusieurs joueurs, ou si vous avez des questions concernant notre organisation, vous êtes au bon endroit !</p>
+                <p>Envoyez-nous simplement un message via ce formulaire, et nous vous répondrons dans les plus brefs délais. Nous sommes impatients de collaborer avec vous et de faire avancer notre communauté compétitive !</p>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="discord">Discord :</label>
+                    <input type="text" id="discord" name="discord" required>
+
+                    <label for="equipe">Equipe :</label>
+                    <input type="text" id="equipe" name="equipe" required>
+
+                    <label for="options">Choisissez une option :</label>
+                    <div>
+                        <input type="radio" id="ajout" name="options" value="ajout" required>
+                        <label for="ajout">Ajout d'équipe</label><br>
+                        <input type="radio" id="modif" name="options" value="modif">
+                        <label for="modif">Modification d'équipe</label><br>
+                        <input type="radio" id="question" name="options" value="question">
+                        <label for="question">Question relative aux règles de la compétition</label><br>
+                        <input type="radio" id="calendrier" name="options" value="calendrier">
+                        <label for="calendrier">Problème de calendrier</label><br>
+                        <input type="radio" id="autres" name="options" value="autres">
+                        <label for="autres">Autres</label><br>
+                    </div>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <div>
+                        <input type="checkbox" id="accept" name="accept" required>
+                        <label for="accept">En cochant cette case, vous acceptez que vos informations soient collectées et traitées selon notre politique de confidentialité.</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="reponse" name="reponse" required>
+                        <label for="reponse">Vous reconnaissez que les demandes sont traitées dans les meilleurs délais, mais sans garantie immédiate de réponse.</label>
+                    </div>
+
+                    <button type="submit">Soumettre</button>
+                </form>
+            </div>
         </section>
     </main>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2025 - Gestion des Compétitions. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2025 Gestion de Compétitions - Rainbow Six Siege</p>
     </footer>
-    <script src="assets/script.js" defer></script>
 </body>
+
 </html>
